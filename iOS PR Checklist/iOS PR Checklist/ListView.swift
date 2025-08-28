@@ -11,13 +11,14 @@ struct ListView: View {
     @State var imaginaryData: [Item] = []
     
     var body: some View {
-        List {
-            Section {
-                ForEach(imaginaryData) { data in
-                    Text(data.content)
-                }
-            } header: {
+        ScrollView {
+            VStack(alignment: .leading) {
                 Text("Items")
+                    .font(.title)
+                    .padding(.leading, 15)
+                ForEach(imaginaryData) { data in
+                    LyricView(content: data.content, position: data.position)
+                }
             }
         }
     }

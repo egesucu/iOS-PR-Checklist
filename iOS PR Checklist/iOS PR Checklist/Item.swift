@@ -8,7 +8,8 @@
 import Foundation
 
 struct Item: Identifiable {
-    var content: String
+    let content: String
+    let position: LyricPosition
     
     var id: String {
         content
@@ -18,9 +19,9 @@ struct Item: Identifiable {
 extension Item {
     // Check out https://www.youtube.com/watch?v=bGNT5Uh-WKw
     static let demoItems: [Self] = [
-        .init(content: "Hey ho! Let's go"),
-        .init(content: "Folklore și Rock'n'roll"),
-        .init(content: "Pleacă trenul! Unde esti?"),
-        .init(content: "Chișinău – București")
+        .init(content: "Hey ho! Let's go", position: .left),
+        .init(content: "Folklore și Rock'n'roll", position: .right),
+        .init(content: "Pleacă trenul! Unde esti?", position: .left),
+        .init(content: "Chișinău – București", position: .right)
     ]
 }
