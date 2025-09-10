@@ -5,10 +5,11 @@
 //  Created by Sucu, Ege on 1.09.2025.
 //
 
-
 import XCTest
 
+@MainActor
 final class DailyMeaningView_UITests: XCTestCase {
+    
     func test_DailyMeaning_loadingAppears() {
         let app = XCUIApplication()
         app.launch()

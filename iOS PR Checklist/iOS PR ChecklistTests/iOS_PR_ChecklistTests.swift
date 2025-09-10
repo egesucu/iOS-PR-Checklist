@@ -10,16 +10,18 @@ import Testing
 
 struct iOS_PR_ChecklistTests {
     
-    let manager: MockDictionaryManager
+    let dictionaryManager: MockDictionaryManager
+    let backgroundTaskManager: MockBackgroundTaskManager
     
     init() {
-        self.manager = MockDictionaryManager()
+        self.dictionaryManager = MockDictionaryManager()
+        self.backgroundTaskManager = MockBackgroundTaskManager()
     }
     
-    @Test("Test a successful fetch")
-    func testSuccessfullFetch() async throws {
-        manager.shouldThrowError = false
-        manager.mockMeanings = [.init(
+    @Test
+    func `Test a successful fetch`() async throws {
+        dictionaryManager.shouldThrowError = false
+        dictionaryManager.mockMeanings = [.init(
             word: "Morning",
             meanings: [.init(
                 definitions: [.init(
@@ -31,42 +33,49 @@ struct iOS_PR_ChecklistTests {
             sourceURLS: []
         )]
         
-        let meanings = try await manager.fetchWord(searchTerm: "Morning")
+        let meanings = try await dictionaryManager.fetchWord(searchTerm: "Morning")
         
         #expect(!meanings.isEmpty)
-        #expect(manager.errorToThrow == nil)
+        #expect(dictionaryManager.errorToThrow == nil)
         #expect(meanings.first?.word == "Morning")
         #expect(meanings.first?.meanings.first?.definitions.first?.example == "Good Morning")
     }
     
-    @Test("Test an invalid URL failure")
-    func testInvalidURLFailure() async throws {
-        manager.shouldThrowError = true
-        manager.errorToThrow = .invalidURL
+    @Test
+    func `Test an invalid URL failure`() async throws {
+        dictionaryManager.shouldThrowError = true
+        dictionaryManager.errorToThrow = .invalidURL
        
         await #expect(throws: DictionaryError.invalidURL.self) {
-            _ = try await manager.fetchWord(searchTerm: "Morning")
+            _ = try await dictionaryManager.fetchWord(searchTerm: "Morning")
         }
-        #expect(manager.errorToThrow == .invalidURL)
+        #expect(dictionaryManager.errorToThrow == .invalidURL)
     }
     
-    @Test("Test not founded error")
-    func testWordNotFoundedFailure() async throws {
-        manager.shouldThrowError = true
-        manager.errorToThrow = .wordNotFound(title: "The word you're looking has not been found", resolution: "Try a different word")
+    @Test
+    func `Test not founded error`() async throws {
+        dictionaryManager.shouldThrowError = true
+        dictionaryManager.errorToThrow = .wordNotFound(title: "The word you're looking has not been found", resolution: "Try a different word")
         
         await #expect(throws: DictionaryError.wordNotFound(title: "The word you're looking has not been found", resolution: "Try a different word").self) {
-            _ = try await manager.fetchWord(searchTerm: "Morning")
+            _ = try await dictionaryManager.fetchWord(searchTerm: "Morning")
         }
     }
     
-    @Test("Test default failuıre on mock")
-    func testDefaultFailureOnMock() async throws {
-        manager.shouldThrowError = true
-        manager.errorToThrow = nil
+    @Test
+    func `Test default failuıre on mock`() async throws {
+        dictionaryManager.shouldThrowError = true
+        dictionaryManager.errorToThrow = nil
         
         await #expect(throws: DictionaryError.invalidURL.self) {
-            _ = try await manager.fetchWord(searchTerm: "Morning")
+            _ = try await dictionaryManager.fetchWord(searchTerm: "Morning")
         }
+    }
+    
+    @Test
+    func `Test Mock Background Data Fetch`() async throws {
+        let task = backgroundTaskManager.startFakeBackgroundTaskConcurrency()
+        await task.value
+        #expect(backgroundTaskManager.resultConcurrency == "✅ Concurrency: finished background work")
     }
 }

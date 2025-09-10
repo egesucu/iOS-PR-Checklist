@@ -7,6 +7,8 @@
 import XCTest
 
 final class ListView_UITests: XCTestCase {
+    
+    @MainActor
     func test_ListView() {
         let app = XCUIApplication()
         app.launchArguments += ["-UITest_ListView_DemoData"]

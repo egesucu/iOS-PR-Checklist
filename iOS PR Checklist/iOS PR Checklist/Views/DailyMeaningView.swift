@@ -18,7 +18,7 @@ struct DailyMeaningView: View {
     var searchTerm: String
     @State private var viewState: MeaningState = .loading
     
-    let manager: DictionaryManager = DictionaryManagerImplementation.shared
+    let manager: any DictionaryManager = DictionaryManagerImplementation.shared
     
     var body: some View {
         VStack(spacing: 20) {
