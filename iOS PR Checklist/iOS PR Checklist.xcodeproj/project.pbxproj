@@ -6,11 +6,40 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXContainerItemProxy section */
+		721CAB5B2E65AC4E00202891 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 72B3EB402E5F4E6300658936 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 72B3EB472E5F4E6300658936;
+			remoteInfo = "iOS PR Checklist";
+		};
+		721CAB6E2E65BDDD00202891 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 72B3EB402E5F4E6300658936 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 72B3EB472E5F4E6300658936;
+			remoteInfo = "iOS PR Checklist";
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		721CAB572E65AC4E00202891 /* iOS PR ChecklistTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "iOS PR ChecklistTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		721CAB682E65BDDD00202891 /* iOS PR ChecklistUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "iOS PR ChecklistUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		72B3EB482E5F4E6300658936 /* iOS PR Checklist.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iOS PR Checklist.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
+		721CAB582E65AC4E00202891 /* iOS PR ChecklistTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = "iOS PR ChecklistTests";
+			sourceTree = "<group>";
+		};
+		721CAB692E65BDDD00202891 /* iOS PR ChecklistUITests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = "iOS PR ChecklistUITests";
+			sourceTree = "<group>";
+		};
 		72B3EB4A2E5F4E6300658936 /* iOS PR Checklist */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = "iOS PR Checklist";
@@ -19,6 +48,20 @@
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		721CAB542E65AC4E00202891 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		721CAB652E65BDDD00202891 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		72B3EB452E5F4E6300658936 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -33,6 +76,8 @@
 			isa = PBXGroup;
 			children = (
 				72B3EB4A2E5F4E6300658936 /* iOS PR Checklist */,
+				721CAB582E65AC4E00202891 /* iOS PR ChecklistTests */,
+				721CAB692E65BDDD00202891 /* iOS PR ChecklistUITests */,
 				72B3EB492E5F4E6300658936 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -41,6 +86,8 @@
 			isa = PBXGroup;
 			children = (
 				72B3EB482E5F4E6300658936 /* iOS PR Checklist.app */,
+				721CAB572E65AC4E00202891 /* iOS PR ChecklistTests.xctest */,
+				721CAB682E65BDDD00202891 /* iOS PR ChecklistUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -48,6 +95,52 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		721CAB562E65AC4E00202891 /* iOS PR ChecklistTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 721CAB5D2E65AC4E00202891 /* Build configuration list for PBXNativeTarget "iOS PR ChecklistTests" */;
+			buildPhases = (
+				721CAB532E65AC4E00202891 /* Sources */,
+				721CAB542E65AC4E00202891 /* Frameworks */,
+				721CAB552E65AC4E00202891 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				721CAB5C2E65AC4E00202891 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				721CAB582E65AC4E00202891 /* iOS PR ChecklistTests */,
+			);
+			name = "iOS PR ChecklistTests";
+			packageProductDependencies = (
+			);
+			productName = "iOS PR ChecklistTests";
+			productReference = 721CAB572E65AC4E00202891 /* iOS PR ChecklistTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		721CAB672E65BDDD00202891 /* iOS PR ChecklistUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 721CAB702E65BDDD00202891 /* Build configuration list for PBXNativeTarget "iOS PR ChecklistUITests" */;
+			buildPhases = (
+				721CAB642E65BDDD00202891 /* Sources */,
+				721CAB652E65BDDD00202891 /* Frameworks */,
+				721CAB662E65BDDD00202891 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				721CAB6F2E65BDDD00202891 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				721CAB692E65BDDD00202891 /* iOS PR ChecklistUITests */,
+			);
+			name = "iOS PR ChecklistUITests";
+			packageProductDependencies = (
+			);
+			productName = "iOS PR ChecklistUITests";
+			productReference = 721CAB682E65BDDD00202891 /* iOS PR ChecklistUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 		72B3EB472E5F4E6300658936 /* iOS PR Checklist */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 72B3EB532E5F4E6500658936 /* Build configuration list for PBXNativeTarget "iOS PR Checklist" */;
@@ -80,6 +173,14 @@
 				LastSwiftUpdateCheck = 1640;
 				LastUpgradeCheck = 1640;
 				TargetAttributes = {
+					721CAB562E65AC4E00202891 = {
+						CreatedOnToolsVersion = 16.4;
+						TestTargetID = 72B3EB472E5F4E6300658936;
+					};
+					721CAB672E65BDDD00202891 = {
+						CreatedOnToolsVersion = 16.4;
+						TestTargetID = 72B3EB472E5F4E6300658936;
+					};
 					72B3EB472E5F4E6300658936 = {
 						CreatedOnToolsVersion = 16.4;
 					};
@@ -100,11 +201,27 @@
 			projectRoot = "";
 			targets = (
 				72B3EB472E5F4E6300658936 /* iOS PR Checklist */,
+				721CAB562E65AC4E00202891 /* iOS PR ChecklistTests */,
+				721CAB672E65BDDD00202891 /* iOS PR ChecklistUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		721CAB552E65AC4E00202891 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		721CAB662E65BDDD00202891 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		72B3EB462E5F4E6300658936 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -115,6 +232,20 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		721CAB532E65AC4E00202891 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		721CAB642E65BDDD00202891 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		72B3EB442E5F4E6300658936 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -124,7 +255,90 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		721CAB5C2E65AC4E00202891 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 72B3EB472E5F4E6300658936 /* iOS PR Checklist */;
+			targetProxy = 721CAB5B2E65AC4E00202891 /* PBXContainerItemProxy */;
+		};
+		721CAB6F2E65BDDD00202891 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 72B3EB472E5F4E6300658936 /* iOS PR Checklist */;
+			targetProxy = 721CAB6E2E65BDDD00202891 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		721CAB5E2E65AC4E00202891 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = RKA7R98LN8;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "tr.com.egesucu.iOS-PR-ChecklistTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/iOS PR Checklist.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/iOS PR Checklist";
+			};
+			name = Debug;
+		};
+		721CAB5F2E65AC4E00202891 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = RKA7R98LN8;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "tr.com.egesucu.iOS-PR-ChecklistTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/iOS PR Checklist.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/iOS PR Checklist";
+			};
+			name = Release;
+		};
+		721CAB712E65BDDD00202891 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = RKA7R98LN8;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "tr.com.egesucu.iOS-PR-ChecklistUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "iOS PR Checklist";
+			};
+			name = Debug;
+		};
+		721CAB722E65BDDD00202891 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = RKA7R98LN8;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "tr.com.egesucu.iOS-PR-ChecklistUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "iOS PR Checklist";
+			};
+			name = Release;
+		};
 		72B3EB512E5F4E6500658936 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -305,6 +519,24 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		721CAB5D2E65AC4E00202891 /* Build configuration list for PBXNativeTarget "iOS PR ChecklistTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				721CAB5E2E65AC4E00202891 /* Debug */,
+				721CAB5F2E65AC4E00202891 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		721CAB702E65BDDD00202891 /* Build configuration list for PBXNativeTarget "iOS PR ChecklistUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				721CAB712E65BDDD00202891 /* Debug */,
+				721CAB722E65BDDD00202891 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		72B3EB432E5F4E6300658936 /* Build configuration list for PBXProject "iOS PR Checklist" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
